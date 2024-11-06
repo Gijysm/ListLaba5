@@ -1,24 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string-array name="printers">
-        <item>"HP LaserJet Pro M404dn"</item>
-        <item>"Canon PIXMA TS8320"</item>
-        <item>"Epson EcoTank ET-4760"</item>
-        <item>"Brother HL-L2350DW"</item>
-        <item>"Samsung Xpress M2020W"</item>
-        <item>"Ricoh SP 3710DN"</item>
-        <item>"Kyocera ECOSYS P5026cdw"</item>
-        <item>"Xerox Phaser 6510"</item>
-        <item>"Lexmark B2236dw"</item>
-        <item>"Dell E310dw"</item>
-        <item>"OKI B432dn"</item>
-        <item>"HP OfficeJet Pro 9015"</item>
-        <item>"Canon imageCLASS MF644Cdw"</item>
-        <item>"Epson Workforce WF-2830"</item>
-        <item>"Brother MFC-J995DW"</item>
-        <item>"Samsung ProXpress SL-M3820DW"</item>
-        <item>"Ricoh SP C261SFNw"</item>
-        <item>"Kyocera TASKalfa 2552ci"</item>
-        <item>"Xerox VersaLink C400"</item>
+    <string-array name="cameras">
+        <item>"Canon EOS R5"</item>
+        <item>"Nikon Z7 II"</item>
+        <item>"Sony A7 IV"</item>
+        <item>"Canon EOS-1D X Mark III"</item>
+        <item>"Canon EOS Rebel T8i"</item>
     </string-array>
+
 </resources>
