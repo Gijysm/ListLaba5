@@ -2,8 +2,6 @@ package com.example.list;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -17,7 +15,7 @@ import androidx.core.view.WindowInsetsCompat;
 import java.util.Vector;
 
 public class MainActivity extends AppCompatActivity {
-    private ListView Printers;
+    private ListView Camera;
     private TextView selection;
     private Vector<String[]> information = new Vector<>();
     private Vector<Integer> images = new Vector<>();
@@ -35,14 +33,14 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
-        Printers = findViewById(R.id.ListTours);
+        Camera = findViewById(R.id.ListTours);
         selection = findViewById(R.id.Selection);
 
-        String[] printers = getResources().getStringArray(R.array.tours);
+        String[] printers = getResources().getStringArray(R.array.cameras);
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, printers);
-        Printers.setAdapter(adapter);
+        Camera.setAdapter(adapter);
 
-        Printers.setOnItemClickListener((adapterView, view, position, id) -> {
+        Camera.setOnItemClickListener((adapterView, view, position, id) -> {
             String selectedItem = printers[position];
             selection.setText(selectedItem);
 
@@ -58,45 +56,46 @@ public class MainActivity extends AppCompatActivity {
 
     private void initializeData() {
         information.add(new String[]{
-                "Екскурсія до старого міста Кракова",
-                "Опис: Відвідування історичного центру Кракова, зокрема площі Ринок, де можна побачити Маріацький костел і Вавельський замок. Прогулянка старовинними вуличками та знайомство з багатою культурною спадщиною.",
-                "Тривалість: 1 день",
-                "Додаткові послуги: гід, обід, трансфер."
+                "Canon EOS R5",
+                "Опис: Повнокадрова бездзеркальна камера високого рівня з роздільною здатністю 45 МП, можливістю запису 8K-відео і системою Dual Pixel CMOS AF II. Ідеально підходить для професійної фотозйомки.",
+                "Роздільна здатність: 45 МП",
+                "Особливості: 8K-відео, швидкість серійної зйомки 20 кадрів/сек, захист від пилу і вологи."
         });
 
         information.add(new String[]{
-                "Поход до Татр",
-                "Опис: Захоплюючий похід по польській частині гір Татри, де відкриваються неймовірні пейзажі і можна відчути дотик дикої природи.",
-                "Тривалість: 2 дні",
-                "Додаткові послуги: гід, кемпінг, харчування."
+                "Nikon Z7 II",
+                "Опис: Повнокадрова бездзеркальна камера з роздільною здатністю 45.7 МП і подвійним процесором Expeed 6. Забезпечує чудову деталізацію і підходить для професійних фотографів.",
+                "Роздільна здатність: 45.7 МП",
+                "Особливості: 4K UHD-відео, подвійний слот для карт пам'яті, покращений автофокус."
         });
 
         information.add(new String[]{
-                "Екскурсія до Варшави",
-                "Опис: Відвідування столиці Польщі з оглядом її сучасної та історичної архітектури, включаючи Старе місто, палаци та музеї.",
-                "Тривалість: 1 день",
-                "Додаткові послуги: транспорт, обід, екскурсійний супровід."
+                "Sony A7 IV",
+                "Опис: Універсальна повнокадрова камера з роздільною здатністю 33 МП, підходить для фото і відеозйомки з високою деталізацією. Має передову систему автофокусу.",
+                "Роздільна здатність: 33 МП",
+                "Особливості: 4K-відео до 60fps, система автофокусу з AI, інтегрована стабілізація."
         });
 
         information.add(new String[]{
-                "Відвідування соляних копалень у Величці",
-                "Опис: Екскурсія по соляних шахтах Велички – унікальному об’єкту зі скульптурами і каплицями, що створені з солі. Ідеальний варіант для любителів історії та мистецтва.",
-                "Тривалість: 1 день",
-                "Додаткові послуги: гід, трансфер, сувеніри."
+                "Canon EOS-1D X Mark III",
+                "Опис: Професійна дзеркальна камера з роздільною здатністю 20.1 МП, орієнтована на спортивну і репортажну зйомку. Має потужний автофокус і тривалий час роботи від акумулятора.",
+                "Роздільна здатність: 20.1 МП",
+                "Особливості: 5.5K RAW-відео, швидкість зйомки 16 кадрів/сек, захист від пилу і вологи."
         });
 
         information.add(new String[]{
-                "Зимовий відпочинок в Закопаному",
-                "Опис: Відпочинок у гірському курорті Закопане – центрі зимових видів спорту. Включає катання на лижах, сауну, термальні джерела.",
-                "Тривалість: 5 днів",
-                "Додаткові послуги: прокат спорядження, уроки катання, проживання."
+                "Canon EOS Rebel T8i",
+                "Опис: Компактна і легка дзеркальна камера з роздільною здатністю 24.1 МП, підходить для аматорів і початківців. Пропонує широкий спектр можливостей для фото і відеозйомки.",
+                "Роздільна здатність: 24.1 МП",
+                "Особливості: 4K-відео, Dual Pixel AF, зручний сенсорний екран."
         });
 
-        images.add(R.drawable.krakow);      // Example image for Krakow
-        images.add(R.drawable.tatras);      // Example image for Tatra Mountains
-        images.add(R.drawable.warsaw);      // Example image for Warsaw
-        images.add( R.drawable.wawel_castle);   // Example image for Wieliczka Salt Mines
-        images.add(R.drawable.baltic_sea);    // Example image for Zakopane
+
+        images.add(R.drawable.canon);      // Example image for Krakow
+        images.add(R.drawable.nikon);      // Example image for Tatra Mountains
+        images.add(R.drawable.sony);      // Example image for Warsaw
+        images.add( R.drawable.canon1);   // Example image for Wieliczka Salt Mines
+        images.add(R.drawable.canon2);    // Example image for Zakopane
     }
 
 
